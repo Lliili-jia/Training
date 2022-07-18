@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>变色</title>
+	<style>
+		#outer {
+			width: 330px;
+			height: 100px;
+			margin: 10px auto;
+		}
+
+		#outer div {
+			float: left;
+			width: 100px;
+			height: 100px;
+			margin: 0 5px;
+			background: black;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			var oDiv = document.getElementById("outer").getElementsByTagName("div");
+			var oBtn = document.getElementsByTagName("button")[0];
+			oBtn.onclick = function () {
+				for (var i = 0; i < oDiv.length; i++) oDiv[i].style.background = "red";
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<center><button>点击将DIV变成红色</button></center>
+	<div id="outer">
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+</body>
+
+</html>
